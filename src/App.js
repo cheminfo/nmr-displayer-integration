@@ -1,12 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NMRDisplayer from "nmr-displayer";
+import { Analysis } from "nmr-displayer/lib/data/Analysis";
+
+import "./App.css";
+
+const analysis = new Analysis();
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <div style={{ width: 1200, height: 800 }}>
+          <NMRDisplayer data={analysis} />
+        </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
