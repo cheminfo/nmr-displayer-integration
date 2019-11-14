@@ -1,17 +1,15 @@
 import React from "react";
 import NMRDisplayer from "nmr-displayer";
-import { Analysis } from "nmr-displayer/lib/data/Analysis";
 
 import "./App.css";
-
-const analysis = new Analysis();
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <div style={{ width: 1200, height: 800 }}>
-          <NMRDisplayer data={analysis} />
+          {/* TODO: remove data once it's optional */}
+          <NMRDisplayer data={{}} />
         </div>
         <p>
           Edit <code>src/App.js</code> and save to reload.
